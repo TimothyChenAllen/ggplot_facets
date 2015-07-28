@@ -1,11 +1,13 @@
 # 1. Load libraries
 require(ggplot2)
 
-# 2. Create a plot with two facets
+# 2. Make up fake data
 yr <- c(2013,2014,2015,2013,2014,2015)
 widgets.made <- c(10,20,40,15,30,60)
 factory <- c(rep(" Factory A",3),rep("Factory B",3))
 df <- data.frame(factory, widgets.made, yr)
+
+# 3. Create a plot with two facets
 png("./factories.png")
 # Note the geom_bar "fill" parameter-- I want this
 # to be different for each facet; 
